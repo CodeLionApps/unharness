@@ -1,6 +1,6 @@
 {
   "name": "@codelionapps/unharness",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Local, metadata-only analytics for AI coding agent runs (Claude Code, Codex, eve): cost, tokens, tools, checks, subagents",
   "license": "MIT",
   "repository": {
