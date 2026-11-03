@@ -4,6 +4,15 @@ All notable changes to Unharness are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-11-03
+
+### Changed
+
+- Releases are now published from GitHub Actions with npm trusted publishing, so every version on npm carries a
+  provenance attestation linking it to its source commit.
+- The release workflow skips `npm publish` when the version is already on npm, so a re-run still creates the
+  GitHub Release.
+
 ## [0.1.0] - 2026-11-03
 
 First public release.

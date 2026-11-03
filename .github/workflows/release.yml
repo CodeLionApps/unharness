@@ -43,8 +43,13 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: scripts/smoke-pack.sh
-      # --ignore-scripts: publish the build that was just smoke-tested instead of rebuilding it in prepack
-      - run: npm publish --provenance --access public --ignore-scripts
+      # --ignore-scripts: publish the build that was just smoke-tested instead of rebuilding it in prepack.
+      # A version that is already on npm is skipped, so a re-run can still create the GitHub Release.
+      - name: Publish to npm
+        run: |
+          spec="$(node -p "require('./package.json').name")@${GITHUB_REF_NAME#v}"
+          if npm view "$spec" version >/dev/null 2>&1; then echo "$spec is already on npm, skipping publish"; exit 0; fi
+          npm publish --provenance --access public --ignore-scripts
       - name: Create the GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
