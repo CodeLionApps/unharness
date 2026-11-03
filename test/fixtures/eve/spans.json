@@ -1,0 +1,2085 @@
+{
+ "resourceSpans": [
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "support-bot"
+      }
+     },
+     {
+      "key": "telemetry.sdk.language",
+      "value": {
+       "stringValue": "nodejs"
+      }
+     },
+     {
+      "key": "telemetry.sdk.name",
+      "value": {
+       "stringValue": "opentelemetry"
+      }
+     },
+     {
+      "key": "process.command_args",
+      "value": {
+       "arrayValue": {
+        "values": [
+         {
+          "stringValue": "node"
+         },
+         {
+          "stringValue": "CANARY_7f3a9 --prompt"
+         }
+        ]
+       }
+      }
+     }
+    ],
+    "droppedAttributesCount": 0
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "eve.agent",
+      "version": "0.91.0"
+     },
+     "spans": [
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000001",
+       "name": "invoke_agent support-bot",
+       "kind": 1,
+       "startTimeUnixNano": "1793404800000000000",
+       "endTimeUnixNano": "1793404806500000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.framework.name",
+         "value": {
+          "stringValue": "eve"
+         }
+        },
+        {
+         "key": "agent.framework.version",
+         "value": {
+          "stringValue": "0.91.0"
+         }
+        },
+        {
+         "key": "operation.name",
+         "value": {
+          "stringValue": "invoke_agent"
+         }
+        },
+        {
+         "key": "resource.name",
+         "value": {
+          "stringValue": "invoke_agent support-bot"
+         }
+        },
+        {
+         "key": "agent.channel.kind",
+         "value": {
+          "stringValue": "http"
+         }
+        },
+        {
+         "key": "agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "invoke_agent"
+         }
+        },
+        {
+         "key": "agent.turn.id",
+         "value": {
+          "stringValue": "turn_01"
+         }
+        },
+        {
+         "key": "agent.turn.sequence",
+         "value": {
+          "intValue": 1
+         }
+        },
+        {
+         "key": "agent.run.type",
+         "value": {
+          "stringValue": "session"
+         }
+        },
+        {
+         "key": "agent.trace.content.input",
+         "value": {
+          "boolValue": false
+         }
+        },
+        {
+         "key": "agent.trace.content.output",
+         "value": {
+          "boolValue": false
+         }
+        },
+        {
+         "key": "agent.model.id",
+         "value": {
+          "stringValue": "openai/gpt-5.4-mini"
+         }
+        },
+        {
+         "key": "agent.turn.outcome",
+         "value": {
+          "stringValue": "completed"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": 2600
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": 290
+         }
+        },
+        {
+         "key": "gen_ai.usage.cache_read.input_tokens",
+         "value": {
+          "intValue": 1024
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.output.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.system_instructions",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404800000000000",
+         "name": "turn.started",
+         "attributes": [],
+         "droppedAttributesCount": 0
+        },
+        {
+         "timeUnixNano": "1793404806500000000",
+         "name": "turn.completed",
+         "attributes": [],
+         "droppedAttributesCount": 0
+        },
+        {
+         "timeUnixNano": "1793404800000000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000002",
+       "parentSpanId": "a000000000000001",
+       "name": "agent.step",
+       "kind": 1,
+       "startTimeUnixNano": "1793404800050000000",
+       "endTimeUnixNano": "1793404804000000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.turn.id",
+         "value": {
+          "stringValue": "turn_01"
+         }
+        },
+        {
+         "key": "agent.step.index",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "agent.step.attempt",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "operation.name",
+         "value": {
+          "stringValue": "workflow"
+         }
+        },
+        {
+         "key": "resource.name",
+         "value": {
+          "stringValue": "agent.step"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "workflow"
+         }
+        },
+        {
+         "key": "agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "agent.usage.input_tokens",
+         "value": {
+          "intValue": 1200
+         }
+        },
+        {
+         "key": "agent.usage.output_tokens",
+         "value": {
+          "intValue": 80
+         }
+        },
+        {
+         "key": "agent.usage.cache_read_tokens",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "agent.usage.cost_usd",
+         "value": {
+          "doubleValue": 0.00062
+         }
+        },
+        {
+         "key": "gen_ai.usage.cost",
+         "value": {
+          "doubleValue": 0.00062
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404804000000000",
+         "name": "step.completed",
+         "attributes": [],
+         "droppedAttributesCount": 0
+        },
+        {
+         "timeUnixNano": "1793404800050000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000003",
+       "parentSpanId": "a000000000000002",
+       "name": "chat openai/gpt-5.4-mini",
+       "kind": 3,
+       "startTimeUnixNano": "1793404800100000000",
+       "endTimeUnixNano": "1793404802100000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "resource.name",
+         "value": {
+          "stringValue": "chat openai/gpt-5.4-mini"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "gateway"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "openai/gpt-5.4-mini"
+         }
+        },
+        {
+         "key": "agent.usage.cost_usd",
+         "value": {
+          "doubleValue": 0.00062
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": 1200
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": 80
+         }
+        },
+        {
+         "key": "gen_ai.usage.cache_read.input_tokens",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "gen_ai.response.id",
+         "value": {
+          "stringValue": "resp_aaa111"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gpt-5.4-mini-2026-03-01"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "tool-calls"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.output.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.prompt",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.prompt.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.response.text",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.response.tool_calls",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.tool.definitions",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404800100000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000004",
+       "parentSpanId": "a000000000000002",
+       "name": "execute_tool get_weather",
+       "kind": 1,
+       "startTimeUnixNano": "1793404802200000000",
+       "endTimeUnixNano": "1793404802650000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.turn.id",
+         "value": {
+          "stringValue": "turn_01"
+         }
+        },
+        {
+         "key": "agent.step.index",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "agent.step.attempt",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "resource.name",
+         "value": {
+          "stringValue": "execute_tool get_weather"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.id",
+         "value": {
+          "stringValue": "call_w1"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "get_weather"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "agent.action.kind",
+         "value": {
+          "stringValue": "tool-call"
+         }
+        },
+        {
+         "key": "agent.action.name",
+         "value": {
+          "stringValue": "get_weather"
+         }
+        },
+        {
+         "key": "agent.tool.is_framework",
+         "value": {
+          "boolValue": false
+         }
+        },
+        {
+         "key": "agent.action.outcome",
+         "value": {
+          "stringValue": "completed"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.arguments",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.result",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "error.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.stacktrace",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404802200000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000005",
+       "parentSpanId": "a000000000000002",
+       "name": "execute_tool search_docs",
+       "kind": 1,
+       "startTimeUnixNano": "1793404802200000000",
+       "endTimeUnixNano": "1793404803900000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.turn.id",
+         "value": {
+          "stringValue": "turn_01"
+         }
+        },
+        {
+         "key": "agent.step.index",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "agent.step.attempt",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "resource.name",
+         "value": {
+          "stringValue": "execute_tool search_docs"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.id",
+         "value": {
+          "stringValue": "call_s1"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "search_docs"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "agent.action.kind",
+         "value": {
+          "stringValue": "tool-call"
+         }
+        },
+        {
+         "key": "agent.action.name",
+         "value": {
+          "stringValue": "search_docs"
+         }
+        },
+        {
+         "key": "agent.tool.is_framework",
+         "value": {
+          "boolValue": false
+         }
+        },
+        {
+         "key": "agent.action.outcome",
+         "value": {
+          "stringValue": "failed"
+         }
+        },
+        {
+         "key": "error.type",
+         "value": {
+          "stringValue": "ToolExecutionError"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.arguments",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.result",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "error.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.stacktrace",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404802200000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 2,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000006",
+       "parentSpanId": "a000000000000001",
+       "name": "agent.step",
+       "kind": 1,
+       "startTimeUnixNano": "1793404804050000000",
+       "endTimeUnixNano": "1793404806450000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.turn.id",
+         "value": {
+          "stringValue": "turn_01"
+         }
+        },
+        {
+         "key": "agent.step.index",
+         "value": {
+          "intValue": 1
+         }
+        },
+        {
+         "key": "agent.step.attempt",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "operation.name",
+         "value": {
+          "stringValue": "workflow"
+         }
+        },
+        {
+         "key": "resource.name",
+         "value": {
+          "stringValue": "agent.step"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "workflow"
+         }
+        },
+        {
+         "key": "agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "agent.usage.input_tokens",
+         "value": {
+          "intValue": 1400
+         }
+        },
+        {
+         "key": "agent.usage.output_tokens",
+         "value": {
+          "intValue": 210
+         }
+        },
+        {
+         "key": "agent.usage.cache_read_tokens",
+         "value": {
+          "intValue": 1024
+         }
+        },
+        {
+         "key": "agent.usage.cost_usd",
+         "value": {
+          "doubleValue": 0.00071
+         }
+        },
+        {
+         "key": "gen_ai.usage.cost",
+         "value": {
+          "doubleValue": 0.00071
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404806450000000",
+         "name": "step.completed",
+         "attributes": [],
+         "droppedAttributesCount": 0
+        },
+        {
+         "timeUnixNano": "1793404804050000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000007",
+       "parentSpanId": "a000000000000006",
+       "name": "chat openai/gpt-5.4-mini",
+       "kind": 3,
+       "startTimeUnixNano": "1793404804100000000",
+       "endTimeUnixNano": "1793404806400000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "resource.name",
+         "value": {
+          "stringValue": "chat openai/gpt-5.4-mini"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "gateway"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "openai/gpt-5.4-mini"
+         }
+        },
+        {
+         "key": "agent.usage.cost_usd",
+         "value": {
+          "doubleValue": 0.00071
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": 1400
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": 210
+         }
+        },
+        {
+         "key": "gen_ai.usage.cache_read.input_tokens",
+         "value": {
+          "intValue": 1024
+         }
+        },
+        {
+         "key": "gen_ai.response.id",
+         "value": {
+          "stringValue": "resp_bbb222"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gpt-5.4-mini-2026-03-01"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.output.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.prompt",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.prompt.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.response.text",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.response.tool_calls",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.tool.definitions",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404804100000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000008",
+       "parentSpanId": "a000000000000002",
+       "name": "execute_tool load_skill",
+       "kind": 1,
+       "startTimeUnixNano": "1793404802300000000",
+       "endTimeUnixNano": "1793404802350000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "pdf-extract"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.id",
+         "value": {
+          "stringValue": "call_k1"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "agent.action.kind",
+         "value": {
+          "stringValue": "load-skill"
+         }
+        },
+        {
+         "key": "agent.action.name",
+         "value": {
+          "stringValue": "pdf-extract"
+         }
+        },
+        {
+         "key": "agent.action.outcome",
+         "value": {
+          "stringValue": "completed"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.arguments",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.result",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "error.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.stacktrace",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404802300000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "a000000000000009",
+       "parentSpanId": "a000000000000002",
+       "name": "execute_tool researcher",
+       "kind": 1,
+       "startTimeUnixNano": "1793404802700000000",
+       "endTimeUnixNano": "1793404803800000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "researcher"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.id",
+         "value": {
+          "stringValue": "call_sub1"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "agent.action.kind",
+         "value": {
+          "stringValue": "subagent-call"
+         }
+        },
+        {
+         "key": "agent.action.name",
+         "value": {
+          "stringValue": "researcher"
+         }
+        },
+        {
+         "key": "agent.action.outcome",
+         "value": {
+          "stringValue": "completed"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "researcher"
+         }
+        },
+        {
+         "key": "agent.invocation.role",
+         "value": {
+          "stringValue": "caller"
+         }
+        },
+        {
+         "key": "agent.usage.input_tokens",
+         "value": {
+          "intValue": 5000
+         }
+        },
+        {
+         "key": "agent.usage.output_tokens",
+         "value": {
+          "intValue": 400
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.arguments",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.result",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "error.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.stacktrace",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404802700000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "b000000000000001",
+       "parentSpanId": "a000000000000009",
+       "name": "invoke_agent researcher",
+       "kind": 1,
+       "startTimeUnixNano": "1793404802750000000",
+       "endTimeUnixNano": "1793404803750000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JCHILD"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "invoke_agent"
+         }
+        },
+        {
+         "key": "agent.name",
+         "value": {
+          "stringValue": "researcher"
+         }
+        },
+        {
+         "key": "agent.turn.id",
+         "value": {
+          "stringValue": "turn_c1"
+         }
+        },
+        {
+         "key": "agent.run.type",
+         "value": {
+          "stringValue": "subagent"
+         }
+        },
+        {
+         "key": "agent.parent_run.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "agent.parent_call.id",
+         "value": {
+          "stringValue": "call_sub1"
+         }
+        },
+        {
+         "key": "agent.subagent.name",
+         "value": {
+          "stringValue": "researcher"
+         }
+        },
+        {
+         "key": "agent.framework.name",
+         "value": {
+          "stringValue": "eve"
+         }
+        },
+        {
+         "key": "agent.framework.version",
+         "value": {
+          "stringValue": "0.91.0"
+         }
+        },
+        {
+         "key": "agent.turn.outcome",
+         "value": {
+          "stringValue": "completed"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.output.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.system_instructions",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404802750000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "b000000000000002",
+       "parentSpanId": "b000000000000001",
+       "name": "agent.step",
+       "kind": 1,
+       "startTimeUnixNano": "1793404802760000000",
+       "endTimeUnixNano": "1793404803740000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JCHILD"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "workflow"
+         }
+        },
+        {
+         "key": "agent.turn.id",
+         "value": {
+          "stringValue": "turn_c1"
+         }
+        },
+        {
+         "key": "agent.step.index",
+         "value": {
+          "intValue": 0
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404802760000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "b000000000000003",
+       "parentSpanId": "b000000000000002",
+       "name": "chat anthropic/claude-sonnet-4-5",
+       "kind": 3,
+       "startTimeUnixNano": "1793404802770000000",
+       "endTimeUnixNano": "1793404803500000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JCHILD"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "gateway"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "anthropic/claude-sonnet-4-5"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": 5000
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": 400
+         }
+        },
+        {
+         "key": "gen_ai.usage.cache_read.input_tokens",
+         "value": {
+          "intValue": 3000
+         }
+        },
+        {
+         "key": "gen_ai.usage.cache_write.input_tokens",
+         "value": {
+          "intValue": 1000
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.output.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.prompt",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.prompt.messages",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.response.text",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.response.tool_calls",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.tool.definitions",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404802770000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      },
+      {
+       "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+       "spanId": "b000000000000004",
+       "parentSpanId": "b000000000000002",
+       "name": "execute_tool web_fetch",
+       "kind": 1,
+       "startTimeUnixNano": "1793404803510000000",
+       "endTimeUnixNano": "1793404803700000000",
+       "attributes": [
+        {
+         "key": "agent.run.id",
+         "value": {
+          "stringValue": "sess_01JCHILD"
+         }
+        },
+        {
+         "key": "agent.trace.schema.version",
+         "value": {
+          "intValue": 4
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "sess_01JABCDEF"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "web_fetch"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.id",
+         "value": {
+          "stringValue": "call_c1"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "agent.action.kind",
+         "value": {
+          "stringValue": "tool-call"
+         }
+        },
+        {
+         "key": "agent.action.name",
+         "value": {
+          "stringValue": "web_fetch"
+         }
+        },
+        {
+         "key": "agent.action.outcome",
+         "value": {
+          "stringValue": "completed"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.arguments",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.result",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "error.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.message",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "exception.stacktrace",
+         "value": {
+          "stringValue": "{\"text\":\"CANARY_7f3a9 secret\"}"
+         }
+        },
+        {
+         "key": "ai.settings.context.user_note",
+         "value": {
+          "stringValue": "CANARY_7f3a9"
+         }
+        }
+       ],
+       "droppedAttributesCount": 0,
+       "events": [
+        {
+         "timeUnixNano": "1793404803510000000",
+         "name": "exception",
+         "attributes": [
+          {
+           "key": "exception.message",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          },
+          {
+           "key": "exception.type",
+           "value": {
+            "stringValue": "CANARY_7f3a9"
+           }
+          }
+         ],
+         "droppedAttributesCount": 0
+        }
+       ],
+       "droppedEventsCount": 0,
+       "status": {
+        "code": 0,
+        "message": "CANARY_7f3a9"
+       },
+       "links": [],
+       "droppedLinksCount": 0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

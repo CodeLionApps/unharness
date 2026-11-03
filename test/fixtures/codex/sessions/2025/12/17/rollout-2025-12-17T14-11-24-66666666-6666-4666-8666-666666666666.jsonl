@@ -1,0 +1,8 @@
+{"id": "66666666-6666-4666-8666-666666666666", "timestamp": "2025-12-17T13:11:24.000Z", "instructions": "CANARY_7f3a9", "git": {"commit_hash": "abc", "branch": "legacy-branch", "repository_url": "git@github.com:org/legacy-repo.git"}}
+{"record_type": "state"}
+{"type": "message", "role": "user", "content": [{"type": "input_text", "text": "CANARY_7f3a9"}]}
+{"type": "reasoning", "id": "r1", "summary": [{"type": "summary_text", "text": "CANARY_7f3a9"}], "content": null, "encrypted_content": "CANARY_7f3a9"}
+{"type": "function_call", "name": "shell", "arguments": "{\"command\": [\"bash\", \"-lc\", \"npm test CANARY_7f3a9\"]}", "call_id": "call_L1"}
+{"type": "function_call_output", "call_id": "call_L1", "output": "{\"output\": \"CANARY_7f3a9\", \"metadata\": {\"exit_code\": 1, \"duration_seconds\": 2.5}}"}
+{"type": "function_call", "name": "shell", "arguments": "{\"command\": [\"apply_patch\", \"*** Begin Patch\\n*** Add File: src/c.ts\\n+CANARY_7f3a9\\n*** End Patch\\n\"]}", "call_id": "call_L2"}
+{"type": "function_call_output", "call_id": "call_L2", "output": "{\"output\": \"Done!\", \"metadata\": {\"exit_code\": 0, \"duration_seconds\": 0.0}}"}

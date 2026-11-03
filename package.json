@@ -1,0 +1,55 @@
+{
+  "name": "@codelionapps/unharness",
+  "version": "0.1.0",
+  "description": "Local, metadata-only analytics for AI coding agent runs (Claude Code, Codex, eve): cost, tokens, tools, checks, subagents",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeLionApps/unharness.git"
+  },
+  "homepage": "https://github.com/CodeLionApps/unharness#readme",
+  "bugs": {
+    "url": "https://github.com/CodeLionApps/unharness/issues"
+  },
+  "keywords": [
+    "claude-code",
+    "codex",
+    "ai-agents",
+    "analytics",
+    "cost",
+    "tokens"
+  ],
+  "type": "module",
+  "bin": {
+    "unharness": "bin/unharness.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test --disable-warning=ExperimentalWarning 'test/**/*.test.ts'",
+    "typecheck": "tsc --noEmit",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && cp src/pricing-snapshot.json dist/ && node scripts/build-dashboard.ts",
+    "prepack": "npm run build",
+    "smoke": "npm run build && scripts/smoke-pack.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^5.9.0"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "src",
+    "skills",
+    "dashboard/.next/standalone"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

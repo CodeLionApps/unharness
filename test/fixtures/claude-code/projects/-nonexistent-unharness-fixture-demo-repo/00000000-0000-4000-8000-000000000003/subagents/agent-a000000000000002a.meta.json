@@ -1,0 +1,10 @@
+{
+ "agentType": "Explore",
+ "launchedWithDefaults": true,
+ "description": "CANARY_7f3a9",
+ "toolUseId": "toolu_0038",
+ "spawnDepth": 1,
+ "requestShape": "background",
+ "requestNonInteractive": true,
+ "finished": true
+}
