@@ -167,10 +167,13 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
         <div className="card tablewrap">
           <h2>Setup fingerprint <span className="sub mono">{r.setup_fingerprint_id ?? ''}</span></h2>
           {!d.fingerprint.length ? <p className="sub">No fingerprint recorded.</p> : (
-            <table>
-              <thead><tr><th>Kind</th><th>Name</th><th>Hash</th></tr></thead>
-              <tbody>{d.fingerprint.map((c) => <tr key={c.kind + c.name}><td>{c.kind}</td><td>{c.name}</td><td className="mono sub">{String(c.hash).slice(0, 10)}</td></tr>)}</tbody>
-            </table>
+            <details className="fold">
+              <summary>{d.fingerprint.length} component{d.fingerprint.length === 1 ? '' : 's'}</summary>
+              <table>
+                <thead><tr><th>Kind</th><th>Name</th><th>Hash</th></tr></thead>
+                <tbody>{d.fingerprint.map((c) => <tr key={c.kind + c.name}><td>{c.kind}</td><td>{c.name}</td><td className="mono sub">{String(c.hash).slice(0, 10)}</td></tr>)}</tbody>
+              </table>
+            </details>
           )}
         </div>
       </div>

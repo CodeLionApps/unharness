@@ -4,6 +4,13 @@ All notable changes to Unharness are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-11-03
+
+### Changed
+
+- The setup fingerprint table on the run page is collapsed by default behind a "N components" toggle, since it can
+  list dozens of components.
+
 ## [0.1.1] - 2026-11-03
 
 ### Changed
