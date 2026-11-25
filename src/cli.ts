@@ -97,7 +97,7 @@ A backup of each database is written to db.sqlite.bak first. Manual tags are kep
       try {
         const bundles = await a.parse!(src);
         // one source = one session group (+ its subagents): route it as a whole by the main session's cwd
-        const profile = bundles.length ? routeFor(bundles[0].cwd, config) : null;
+        const profile = bundles.length ? routeFor(bundles[0].cwd, config, src.path) : null;
         if (profile) {
           const db = dbFor(profile);
           for (const b of bundles) {

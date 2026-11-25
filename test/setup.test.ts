@@ -100,6 +100,26 @@ test('routing: a worktree outside the routes follows its main checkout', () => {
   assert.equal(routeFor(wt, c), 'private');
 });
 
+test('routing: sources (where the log was read from) beat routes, lose to the repo marker', () => {
+  const repo = path.join(tmp, 'src-routing', 'code', 'repo');
+  mkdirSync(repo, { recursive: true });
+  execFileSync('git', ['init', '-q', repo]);
+  const acct = path.join(tmp, 'src-routing', 'claude-work');
+  const c = {
+    profiles: { work: { home: 'w' }, private: { home: 'p' } },
+    sources: [{ path: acct, profile: 'work' }],
+    routes: [{ path: path.join(tmp, 'src-routing', 'code'), profile: 'private' }],
+    default: 'private',
+  };
+  const log = path.join(acct, 'projects', 'x', 's.jsonl');
+  assert.equal(routeFor(repo, c, log), 'work');
+  assert.equal(routeFor(null, c, log), 'work'); // no cwd still routes by account
+  assert.equal(routeFor(repo, c, path.join(tmp, 'other', 's.jsonl')), 'private');
+  assert.equal(routeFor(repo, c), 'private');
+  writeFileSync(path.join(repo, '.unharness.json'), JSON.stringify({ profile: null }));
+  assert.equal(routeFor(repo, c, log), null);
+});
+
 test('sync routes each session to its profile; --rebuild re-routes and keeps tags', async () => {
   const { main } = await import('../src/cli.ts');
   const count = (p: string) => (openDb(dbFile(p)).prepare("SELECT count(*) n FROM run WHERE harness = 'claude-code'").get() as { n: number }).n;
