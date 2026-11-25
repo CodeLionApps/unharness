@@ -6,6 +6,8 @@ All notable changes to Unharness are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-25
+
 ### Added
 
 - `unharness runs --json` prints the runs as JSON for scripts and other tools.
