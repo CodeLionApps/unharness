@@ -126,9 +126,10 @@ A backup of each database is written to db.sqlite.bak first. Manual tags are kep
 
 function runs(db: DB, v: Record<string, any>) {
   const rows = q.listRuns(db, {
-    harness: v.harness, repo: v.repo, tag: v.tag,
+    harness: v.harness, repo: v.repo, tag: v.tag, session: v.session,
     since: v.since ? Date.now() - parseDuration(v.since) : undefined,
-  }, Number(v.limit ?? 30));
+  }, Number(v.limit ?? (v.session ? Infinity : 30)));
+  if (v.json) return console.log(JSON.stringify(rows, null, 1));
   table(rows.map((r) => [
     r.id.length > 20 ? r.id.slice(0, 20) : r.id, when(r.ended_at), r.harness, r.repo ?? '—', (r.models[0] ?? '—').slice(0, 22),
     money(r.cost_total, r.cost_missing), num(r.total.tokens), pct(hitRate(r.total)),
@@ -367,7 +368,8 @@ const HELP = `Unharness — metadata-only analytics for AI agent runs
                                      import new sessions (each into the profile its project routes to);
                                      --rebuild: wipe log-imported runs and re-import (asks first, backs up)
   collect [--port 4318]              local OTLP/HTTP (JSON) collector for eve
-  runs [--harness] [--repo] [--tag] [--since 7d] [--limit 30]
+  runs [--harness] [--repo] [--tag] [--since 7d] [--limit 30] [--session <id>] [--json]
+                                     --session: that run and its resumes (<id>#n), any profile
   run <id>                           run detail (id or unique prefix)
   report [--period 1d|7d|30d|90d]    period aggregate vs previous period
   compare --by harness|setup|tag|model [--since 30d]  (default window 30d)
@@ -385,7 +387,7 @@ export async function main(argv = process.argv.slice(2)) {
     args: argv, allowPositionals: true, strict: true,
     options: {
       harness: { type: 'string' }, repo: { type: 'string' }, tag: { type: 'string' }, since: { type: 'string' },
-      limit: { type: 'string' }, period: { type: 'string' }, by: { type: 'string' }, format: { type: 'string' },
+      limit: { type: 'string' }, session: { type: 'string' }, json: { type: 'boolean' }, period: { type: 'string' }, by: { type: 'string' }, format: { type: 'string' },
       out: { type: 'string' }, port: { type: 'string' }, rm: { type: 'boolean' }, reprice: { type: 'boolean' },
       verbose: { type: 'boolean' }, rebuild: { type: 'boolean' }, stop: { type: 'boolean' }, profile: { type: 'string', short: 'p' }, yes: { type: 'boolean', short: 'y' }, uninstall: { type: 'boolean' }, help: { type: 'boolean', short: 'h' }, version: { type: 'boolean', short: 'v' },
     },
@@ -416,7 +418,12 @@ async function command(cmd: string, args: string[], v: Record<string, any>) {
   }
   const db = openDb(dbFile(profile));
   switch (cmd) {
-    case 'runs': return runs(db, v);
+    case 'runs': {
+      // like `run`: without -p a session may live in another profile
+      const found = v.session && !v.profile ? profileNames().find((p) =>
+        q.listRuns(p === profile ? db : openDb(dbFile(p)), { session: v.session }, 1).length) : undefined;
+      return runs(found && found !== profile ? openDb(dbFile(found)) : db, v);
+    }
     case 'run': {
       if (!args[0]) throw new Error('usage: unharness run <id>');
       // without -p the run may live in another profile (e.g. /summarize-run in a repo routed elsewhere)

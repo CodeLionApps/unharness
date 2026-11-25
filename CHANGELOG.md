@@ -4,6 +4,19 @@ All notable changes to Unharness are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- `unharness runs --json` prints the runs as JSON for scripts and other tools.
+- `unharness runs --session <id>` lists a run with all its resumes (`<id>#n`); without `-p` it finds the profile
+  the session was routed to.
+
+### Changed
+
+- Claude Code sessions are read from `$CLAUDE_CONFIG_DIR` when it is set (`UNHARNESS_CLAUDE_DIR` still wins), so
+  the sync hook of a Claude Code profile with its own config directory imports that profile's sessions.
+
 ## [0.1.2] - 2026-11-03
 
 ### Changed

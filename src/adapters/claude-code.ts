@@ -13,7 +13,8 @@ import type {
 
 type Line = Record<string, any>;
 
-export const claudeDir = () => process.env.UNHARNESS_CLAUDE_DIR ?? path.join(homedir(), '.claude');
+// CLAUDE_CONFIG_DIR: Claude Code's own override, set for its hooks too, so a hook's sync reads the directory it ran from
+export const claudeDir = () => process.env.UNHARNESS_CLAUDE_DIR ?? process.env.CLAUDE_CONFIG_DIR ?? path.join(homedir(), '.claude');
 
 const SESSION_FILE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.jsonl$/;
 const TRANSCRIPT = new Set(['user', 'assistant', 'system', 'attachment']);

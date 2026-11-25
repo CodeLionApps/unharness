@@ -10,6 +10,7 @@ export interface RunFilter {
   since?: number; // ms epoch, by ended_at
   until?: number;
   rootsOnly?: boolean; // default true
+  session?: string; // a run and its resumes (<id>#n)
 }
 
 export type ChecksState = 'green' | 'red' | 'none';
@@ -140,6 +141,7 @@ export function filterRuns(rows: RunRow[], f: RunFilter = {}): RunRow[] {
     if (f.harness && r.harness !== f.harness) return false;
     if (f.repo && r.repo !== f.repo) return false;
     if (f.tag && !r.tags.includes(f.tag)) return false;
+    if (f.session && r.id !== f.session && !r.id.startsWith(f.session + '#')) return false;
     const end = Date.parse(r.ended_at);
     if (f.since != null && end < f.since) return false;
     if (f.until != null && end >= f.until) return false;

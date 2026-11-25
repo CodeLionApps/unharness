@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { openDb, saveBundle, tx } from '../src/db.ts';
-import { allRuns, report, runDetail } from '../src/queries.ts';
+import { allRuns, listRuns, report, runDetail } from '../src/queries.ts';
 import type { RunBundle } from '../src/types.ts';
 
 process.env.UNHARNESS_HOME = '/nonexistent-unharness-home';
@@ -54,4 +54,10 @@ test('reimport keeps the price a request was imported with', () => {
   tx(db, () => saveBundle(db, grown));
   assert.deepEqual(db.prepare("SELECT cost_usd, pricing_version FROM request WHERE run_id = 'x' ORDER BY seq").all().map((r: any) => [r.cost_usd, r.pricing_version.slice(0, 7)]),
     [[99, 'old'], [3, 'litellm']]);
+});
+
+test('session filter: the run and its resumes, not lookalike ids', () => {
+  const db = openDb(':memory:');
+  tx(db, () => { for (const id of ['cc:s', 'cc:s#1', 'cc:s#2', 'cc:s2', 'cc:s:sub']) saveBundle(db, bundle(id, 'claude-sonnet-4-5', 1, {}, id === 'cc:s:sub' ? 'cc:s' : null)); });
+  assert.deepEqual(listRuns(db, { session: 'cc:s' }).map((r) => r.id).sort(), ['cc:s', 'cc:s#1', 'cc:s#2']);
 });
