@@ -6,6 +6,8 @@ All notable changes to Unharness are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-25
+
 ### Added
 
 - `sources` in `config.json` routes sessions by the directory their log was read from (`CLAUDE_CONFIG_DIR`,
