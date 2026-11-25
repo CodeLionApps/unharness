@@ -105,6 +105,7 @@ This starts the dashboard at <http://127.0.0.1:4319> in the background and opens
 ```sh
 unharness runs --since 7d                 # recent runs
 unharness run 3f2a                        # one run in detail (id or unique prefix)
+unharness runs --session cc:3f2a… --json  # a session and its resumes, as JSON for scripts
 unharness report --period 30d             # totals vs the previous 30 days
 unharness compare --by model              # side-by-side metrics per model
 unharness tag 3f2a exp:new-claude-md      # label a run for an experiment
@@ -230,7 +231,7 @@ Runs that used a model missing from the table are marked with `*`, and their cos
 | `UNHARNESS_USER` | User name stored with each run (default: your OS user name). |
 | `UNHARNESS_PROFILE` | Profile used by read commands when `-p` isn't given. |
 | `UNHARNESS_NO_UPDATE_CHECK=1` | Disables the daily update check. |
-| `UNHARNESS_CLAUDE_DIR` | Claude Code directory to read (default `~/.claude`). |
+| `UNHARNESS_CLAUDE_DIR` | Claude Code directory to read (default `$CLAUDE_CONFIG_DIR`, then `~/.claude`). |
 | `UNHARNESS_CODEX_DIR` | Codex directory to read (default `$CODEX_HOME`, then `~/.codex`). |
 
 ## eve integration
