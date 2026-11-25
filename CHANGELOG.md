@@ -6,6 +6,12 @@ All notable changes to Unharness are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- `sources` in `config.json` routes sessions by the directory their log was read from (`CLAUDE_CONFIG_DIR`,
+  `CODEX_HOME`), so all sessions of one agent account land in one profile without a route per repository.
+  A repository's `.unharness.json` still wins; `routes` and `default` apply when no source matches.
+
 ## [0.2.0] - 2026-11-25
 
 ### Added

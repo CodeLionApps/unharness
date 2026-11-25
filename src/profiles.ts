@@ -1,8 +1,10 @@
 // Profiles: separate databases for separate worlds (e.g. work vs private). Configured in <home>/config.json:
 //   { "profiles": { "work": { "home": "~/.unharness" }, "private": { "home": "~/.unharness-private" } },
+//     "sources": [{ "path": "~/.claude-profiles/work", "profile": "work" }],
 //     "routes": [{ "path": "~/Code/private", "profile": "private" }], "default": "work" }
 // A run goes to: the profile named in its repo's .unharness.json ({"profile": "..."}), else the longest matching
-// route, else "default" (null = don't collect). Without "profiles" there is one implicit profile in <home>.
+// source (where its log was read from, e.g. CLAUDE_CONFIG_DIR / CODEX_HOME), else the longest matching route,
+// else "default" (null = don't collect). Without "profiles" there is one implicit profile in <home>.
 import { readFileSync, existsSync, writeFileSync, mkdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { execFileSync } from 'node:child_process';
@@ -12,6 +14,7 @@ import { home, repoInfo } from './util.ts';
 export interface Config {
   profiles?: Record<string, { home: string }>;
   routes?: { path: string; profile: string }[];
+  sources?: { path: string; profile: string }[];
   default?: string | null;
   [k: string]: unknown; // e.g. "checks" (checks.ts)
 }
@@ -70,8 +73,8 @@ function mainCheckout(root: string): string | null {
 }
 
 // Which profile a session working in `cwd` belongs to; null = don't collect. A worktree also matches the marker
-// and routes of its main checkout.
-export function routeFor(cwd: string | null, c = loadConfig()): string | null {
+// and routes of its main checkout. `src` is the log file the session was read from, matched against `sources`.
+export function routeFor(cwd: string | null, c = loadConfig(), src?: string): string | null {
   if (!c.profiles) return IMPLICIT;
   const root = cwd ? repoInfo(cwd).root : null;
   const main = root ? mainCheckout(root) : null;
@@ -85,8 +88,9 @@ export function routeFor(cwd: string | null, c = loadConfig()): string | null {
       } catch { /* malformed marker: fall through to routes */ }
     }
   }
-  const dirs = [cwd && path.resolve(cwd), main].filter((d): d is string => !!d);
-  const hit = (c.routes ?? []).filter((r) => dirs.some((d) => under(d, expand(r.path)))).sort((a, b) => expand(b.path).length - expand(a.path).length)[0];
+  const longest = (rules: Config['routes'], dirs: string[]) =>
+    (rules ?? []).filter((r) => dirs.some((d) => under(d, expand(r.path)))).sort((a, b) => expand(b.path).length - expand(a.path).length)[0];
+  const hit = (src && longest(c.sources, [path.resolve(src)])) || longest(c.routes, [cwd && path.resolve(cwd), main].filter((d): d is string => !!d));
   if (hit && c.profiles[hit.profile]) return hit.profile;
   return c.default === undefined ? Object.keys(c.profiles)[0] : c.default;
 }

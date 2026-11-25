@@ -182,8 +182,20 @@ If you want to keep, say, company work and side projects apart, `unharness setup
 When `sync` imports a session, it chooses a profile in this order:
 
 1. A `.unharness.json` file in the repository root: `{"profile": "private"}` sends the repository's runs to that profile, and `{"profile": null}` means "don't collect this repository at all".
-2. The longest matching entry in `routes`.
-3. `default`. Set it to `null` to skip every session that isn't covered by a route.
+2. The longest matching entry in `sources`: the directory the session log was read from (see below).
+3. The longest matching entry in `routes`.
+4. `default`. Set it to `null` to skip every session that isn't covered by a route.
+
+`sources` routes by agent account instead of by project. If you run Claude Code or Codex under separate accounts (`CLAUDE_CONFIG_DIR`, `CODEX_HOME`), map each account's directory to a profile and every session of that account lands there, wherever the repository lives:
+
+```json
+"sources": [
+  { "path": "~/.claude-profiles/work", "profile": "work" },
+  { "path": "~/.codex-work", "profile": "work" }
+]
+```
+
+`sync` only reads the account directories it is pointed at: a hook runs with the agent's environment, so the hook of a Claude Code account reads that account (Claude Code passes `CLAUDE_CONFIG_DIR` to its hooks), while a manual `unharness sync` reads `CLAUDE_CONFIG_DIR`/`CODEX_HOME` from your shell, or `~/.claude` and `~/.codex`.
 
 A git worktree (for example a Codex worktree under `~/.codex/worktrees`) also matches the `.unharness.json` and routes of its main checkout.
 
